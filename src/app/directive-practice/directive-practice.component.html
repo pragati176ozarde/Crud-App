@@ -1,0 +1,59 @@
+<p>directive-practice works!</p>
+ <div *ngIf="age>=18">
+    <h3>You are eligible for vote</h3>
+
+</div>
+ <p *ngIf="isShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam illo! Dignissimos, aliquid? Ipsum, necessitatibus ipsam facilis consequatur, consequuntur quod doloribus laboriosam optio deleniti harum, cupiditate illo sunt? Voluptatibus, blanditiis.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam illo! Dignissimos, aliquid? Ipsum, necessitatibus ipsam facilis consequatur, consequuntur quod doloribus laboriosam optio deleniti harum, cupiditate illo sunt? Voluptatibus, blanditiis</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae.</p>
+<button type="button" (click)="displayMoreContent()">Read More</button>
+<button type="button"(click)="removeContent()">Hide</button> 
+<!-- *************<button type="button" *ngIf="!isShow" (click)="displayMoreContent()"> Read More</button>
+<button type="button" *ngIf="!isShow" (click)="removeContent()"> Hide</button>*************  -->
+
+<br>
+<!-- <hr>
+<ng-template>
+<h2>ngIf Examples</h2>
+<button *ngIf="!isLoggedIn; else logoutBlock" type="button" (click)="login()">Login</button>
+</ng-template>
+
+<ng-template #logoutBlock>
+    <h1>Log Out</h1>
+<button type="button" (click)="logout()">Logout</button>
+</ng-template> -->
+
+<hr>
+<h2>IfThenElse</h2>
+<div *ngIf="!isLoggedIn; then loginBlock; else logoutBlock"> </div>
+    
+<ng-template #loginBlock>
+
+<h1>Login</h1>
+        <button type="button" (click)="login()">Login</button>
+    </ng-template>
+
+    
+    <ng-template #logoutBlock>
+
+    <h1>Logout</h1>
+        <button type="button" (click)="logout()">Logout</button>
+
+    </ng-template>
+
+<hr>
+<h2>Display states</h2>
+
+<div>
+    <label for="state">State:</label>
+    <select id="state" [(ngModel)]="selectedState" (change)="onStateChange($event)">
+      <option *ngFor="let state of statesList" [value]="state">{{ state }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="district">District:</label>
+    <select id="district" [(ngModel)]="selectedDistrict">
+      <option *ngFor="let district of districtsList" [value]="district">{{ district }}</option>
+    </select>
+  </div>

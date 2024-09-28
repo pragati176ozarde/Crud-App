@@ -1,0 +1,95 @@
+<p>structural-directive works!</p>
+<h2> structural Directive *ngFor</h2>
+<h4> List of Courses</h4>
+<ul>
+    <li  *ngFor="let item of courses">{{item}} </li>
+  </ul>
+    <ul><li  *ngFor="let item of courses ; let i=index">{{i+1}}-{{item}}
+
+    </li>
+    </ul>
+    <hr>
+    <h1 align ="center">Product details</h1>
+
+<div class="container">
+  <table class="table table-border">
+    
+    <thead>
+      <tr>
+        <th scope="col">Sr.No.</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody> 
+      <!-- <tr *ngFor="let Product of products; let i=index">
+        
+        <th scope="row">{{i+1}}</th>
+        <td>{{Product.productName}}</td>
+        <td>{{Product.price}}</td>
+        <td>{{Product.quantity}}</td>
+      </tr>
+       -->
+ <!-- <ng-Class> -->
+       <!-- <tr *ngFor="let Product of products; let i=index; let f=first" [ngClass]="{'bg-primary' :f, 'bg-secondary' :Product.quantity  > 2}">
+        
+        <th scope="row">{{i+1}}</th>
+        <td>{{Product.productName}}</td>
+        <td>{{Product.price}}</td>
+        <td>{{Product.quantity}}</td>
+      </tr>  -->
+    <!-- </ng-Class>
+
+     <ng-style>for understanding  -->
+      
+     <tr *ngFor="let Product of products; let i=index" [ngStyle]=" {'background-color': Product.price > 15000 ? 'red' :'blue'}">
+   
+      <th scope="row">{{i+1}}</th>
+      <td>{{Product.productName}}</td>
+      <td>{{Product.price}}</td>
+      <td>{{Product.quantity}}</td>
+    </tr>
+  <!-- </ng-style> for understanding -->
+       
+    </tbody>
+  </table>
+</div>
+
+<!-- <tr *ngFor="let Product of products; let i=index" [ngStyle]="{'background-color': Product.price > 15000 ? 'red':'blue'}"> -->
+     
+
+
+
+
+<!-- <h2 align ="center">Ng container</h2> -->
+
+<!-- <ng-container *ngFor="let Product of products; let i=index"> -->
+
+
+
+  <!-- <table class="table table-border">
+    
+    <thead>
+      <tr>
+        <th scope="col">Sr.No.</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody> 
+      <ng-container *ngFor="let Product of products; let i=index"> 
+               <tr *ngIf="Product.price>=15000">
+        <th scope="row">{{i+1}}</th>
+        <td>{{Product.productName}}</td>
+        <td>{{Product.price}}</td>
+        <td>{{Product.quantity}}</td>
+      </tr> 
+    </ng-container>
+      
+    </tbody>
+  </table> 
+ </ng-container> -->
+
+  

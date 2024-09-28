@@ -1,0 +1,45 @@
+<!-- <p>ng-for works!</p> -->
+<h5 align="center"> Employee NgFor</h5>
+<h6 align="center">List of ID</h6>
+<div align="Center">
+<label for="id">Id</label>&nbsp;
+<select id="id" [(ngModel)]="selectedId" (change)="onIdChange($event)">$nbsp;
+    <option *ngFor="let id of idList" [value]="id" >{{id}}</option>
+
+</select>
+</div><br> <br>
+<div align="Center">
+    <label for="name">Name</label> &nbsp;
+    <select id="name" [(ngModel)]="selectedName">&nbsp;
+        <option *ngFor="let name of nameList" [value]="name" >{{name}}</option>
+
+    </select>
+</div>
+
+ 
+
+
+ 
+
+
+
+
+<!-- <hr>
+<h2>Display states</h2>
+
+<div>
+    <label for="state">State:</label>
+    <select id="state" [(ngModel)]="selectedState" (change)="onStateChange($event)">
+      <option *ngFor="let state of statesList" [value]="state">{{ state }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="district">District:</label>
+    <select id="district" [(ngModel)]="selectedDistrict">
+      <option *ngFor="let district of districtsList" [value]="district">{{ district }}</option>
+    </select>
+  </div> -->
+
+
+

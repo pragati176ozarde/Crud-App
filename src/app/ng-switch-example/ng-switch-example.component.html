@@ -1,0 +1,39 @@
+<p>ng-switch-example works!</p>
+<h2>Ng Switch Example</h2>
+
+
+<button type="button" class="mx-2" (click)="updateStatus('pending')">Pending</button>
+<button type="button"   class="mx-2" (click)="updateStatus('delivered')">Delivered</button>
+<button type="button" class="mx-2" (click)="updateStatus('shipped')">Shipped</button>
+
+<br> <br>
+<!-- <button type="button"(click)="updatestatus('pending')">Pending</button>
+<button type="button"(click)="updatestatus('pending')">Pending</button> -->
+
+
+<div class="container border" [ngSwitch]="orderStatus">
+<div *ngSwitchCase="'pending'">
+    <h6>Your order is pending</h6>
+</div>
+<div *ngSwitchCase="'processing'">
+<h6>Your order is being processed</h6>
+</div>
+<div *ngSwitchCase="'shipped'">
+    <h6>Your order has been shipped</h6>
+</div>
+<div *ngSwitchCase="'delivered'">
+    <h6> Your order has been delivered</h6>
+
+</div>
+<div *ngSwitchCase="'cancelled'">
+    <h6>Your order has been cancelled</h6>
+
+</div>
+<div *ngSwitchDefault>
+    <h6>No status</h6>
+
+</div>
+
+
+
+</div>

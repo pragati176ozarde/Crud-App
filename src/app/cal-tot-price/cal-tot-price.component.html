@@ -1,0 +1,69 @@
+<p>cal-tot-price works!</p> 
+  <h1 align="center">2 different programs in 1 file cal-tot-price </h1>
+<h2 align="center"> Calculate Total Price</h2>
+<div align="center">
+<label for="id1">Price</label>&nbsp;
+<input type="text" name="pPrice" id="id1" [(ngModel)]="price" (input)="tot()"><br>
+
+<label for="id2">Quantity</label>&nbsp;
+<input type="text" name="qQuant" id="id2" [(ngModel)]="quantity" (input)="tot()"><br>
+
+<label for="id3">Discount</label>&nbsp;
+<input type="text" name="dis" id="id3" [(ngModel)]="discount" (input)="tot()"><br>
+
+</div>
+
+<div align="center">
+<label for="id4">Total Price</label>
+<input type="text" name="totPrice" id="id4"  [(ngModel)]="totalprice" disabled> 
+</div>
+ <!-- <p>{{totalprice}}</p> -->
+
+
+
+
+ <h2 align="center">Calculate Age</h2>
+<div align="center">
+<label for="id1">Name</label>
+<input type="text" name="nm" id="id1" [(ngModel)]="name">&nbsp;
+<label for="id2">Mobile no.</label>
+<input type="text" name="mno" id="id2" [(ngModel)]="mobileno">&nbsp;
+<label for="id3">Date of birth</label>
+<input type="date" name="bDate" id="id3" [(ngModel)]="birthdate"  (change)="calculateAge()">&nbsp;
+<label for="id4">Age</label>
+<input type="text" name="ag" id="id4" [(ngModel)]="age" (ngModelChange)="calculateAge()" disabled>
+</div> 
+
+
+
+    
+    
+
+<h2>Product Form</h2> 
+<div>
+    <label for ="id1">Price1</label>
+    <input type="text" name="pri" id="id1" [(ngModel)]="productObj.price1" (ngModelChange)="CalculateTotalPrice()">
+
+ </div>
+ <div>
+    <label for="id2"> Quantity1</label>
+    <input type="text" name="quat1" id="id2" [(ngModel)]="productObj.quantity1" (ngModelChange)="CalculateTotalPrice()">
+
+ </div>
+ <div>
+    <label for="id3">Total Price1</label>
+    <input type="text" name="totalPrice" id="id3"   disabled [(ngModel)]="productObj.totalPrice1" >
+
+ </div> 
+ <div>
+    <button type="button" (click)="saveProduct()">Save</button>
+ </div>
+
+ 
+     
+     
+     
+     
+   
+   
+
