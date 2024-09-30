@@ -15,6 +15,7 @@ import { StructuralDirectiveComponent } from './structural-directive/structural-
 import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { InterpoProperBindingComponent } from './interpo-proper-binding/interpo-proper-binding.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -31,7 +32,8 @@ import { InterpoProperBindingComponent } from './interpo-proper-binding/interpo-
     StructuralDirectiveComponent,
     NgSwitchExampleComponent,
     NgForComponent,
-    InterpoProperBindingComponent
+    InterpoProperBindingComponent,
+    LoginComponent
     
   
     
