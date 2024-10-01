@@ -18,5 +18,8 @@ export class LoginComponent {
       password:['']
     })
   }
+  login() {
+    console.log(this.loginForm.value);
+  }
 
 }
